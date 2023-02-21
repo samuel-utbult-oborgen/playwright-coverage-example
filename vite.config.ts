@@ -13,6 +13,7 @@ export default defineConfig({
 			exclude: ['node_modules', 'test/'],
 			extension: [ '.js', '.ts', '.vue' ],
 			requireEnv: false,
+			forceBuildInstrument: true,
 		  }),
 	],
 	test: {
