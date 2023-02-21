@@ -20,10 +20,6 @@ export const test = baseTest.extend({
         await fs.promises.mkdir(istanbulCLIOutput, { recursive: true });
         await context.exposeFunction('collectIstanbulCoverage', (
             coverageJSON: string) => {
-            // Why is this the case? And what makes Playwright add a
-            // window.__coverage__ prop?
-            console.error("This is always undefined:", coverageJSON);
-
             if (coverageJSON)
                 fs.writeFileSync(
                     path.join(

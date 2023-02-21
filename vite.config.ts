@@ -4,14 +4,17 @@ import istanbul from 'vite-plugin-istanbul';
 
 export default defineConfig({
 	build: {
-		sourcemap: "hidden",
+		sourcemap: true,
 	},
 	plugins: [
 		sveltekit(),
 		istanbul({
 			include: 'src/*',
 			exclude: ['node_modules', 'test/'],
-			extension: [ '.js', '.ts', '.vue' ],
+			extension: [
+				".ts",
+				".svelte",
+			],
 			requireEnv: false,
 			forceBuildInstrument: true,
 		  }),
