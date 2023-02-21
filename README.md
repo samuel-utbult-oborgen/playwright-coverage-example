@@ -1,7 +1,7 @@
 # Playwright coverage example
 
-Run `npm install` and then `npm test` to see the problem. I get the following
-output:
+Run `npm install` and then `VITE_COVERAGE=true npm test` to see the problem.
+I get the following output:
 
 ```
 > playwright-coverage-example@0.0.1 test
